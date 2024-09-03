@@ -1,0 +1,30 @@
+[
+{
+  "commodity": "Wheat",
+  "price": 1950,
+  "unit": "Rs/Quintal",
+  "market": "Delhi",
+  "date": "2024-08-20"
+},
+{
+  "commodity": "Rice",
+  "price": 3000,
+  "unit": "Rs/Quintal",
+  "market": "Chennai",
+  "date": "2024-08-20"
+},
+{
+  "commodity": "Corn",
+  "price": 2200,
+  "unit": "Rs/Quintal",
+  "market": "Mumbai",
+  "date": "2024-08-20"
+},
+{
+  "commodity": "Sugarcane",
+  "price": 300,
+  "unit": "Rs/Quintal",
+  "market": "Delhi",
+  "date": "2024-08-20"
+}
+]
