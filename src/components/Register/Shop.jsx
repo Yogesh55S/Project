@@ -1,38 +1,44 @@
-import  { useState } from 'react';
-import { CiShoppingTag } from "react-icons/ci";
-import styles from './Shop.module.css';
-
-const Shop = () => {
+import { useState } from 'react';
+import { CiShop } from "react-icons/ci";
+import styles from './shop.module.css';
+import myImage from '/src/components/images/day.jpg'; 
+import Footer from "/src/components/Home/Footer";
+import { Link } from 'react-router-dom';
+const Farmers = () => {
     const [isLogin, setIsLogin] = useState(true);
 
     const handleToggle = () => {
         setIsLogin(!isLogin);
     };
 
-    return (<>
-
-        <div className={styles.container}>
-        <CiShoppingTag className={styles.logo} />
-            <div className={styles.toggleContainer}>
-                <button
-                    className={`${styles.toggleButton} ${isLogin ? styles.active : ''}`}
-                    onClick={handleToggle}
-                >
-                    Login
-                </button>
-                <button
-                    className={`${styles.toggleButton} ${!isLogin ? styles.active : ''}`}
-                    onClick={handleToggle}
-                >
-                    Register
-                </button>
+    return (
+        <>
+            <div className={styles.head}>
+               <div className={styles.container}>
+                    <CiShop className={styles.logo} />
+                    <div className={styles.toggleContainer}>
+                        <button
+                            className={`${styles.toggleButton} ${isLogin ? styles.active : ''}`}
+                            onClick={handleToggle}
+                        >
+                            Login
+                        </button>
+                        <button
+                            className={`${styles.toggleButton} ${!isLogin ? styles.active : ''}`}
+                            onClick={handleToggle}
+                        >
+                            Register
+                        </button>
+                    </div>
+                    {isLogin ? <LoginForm /> : <RegisterForm />}
+                </div>
+                <img src={myImage} className={styles.rightImage}></img>      
+               <p id={styles.good}>Every product on the shelf holds a story,  <br /> and every customer interaction builds a bond. <br /> A storekeeper shapes community one smile at a time.</p>
             </div>
-            {isLogin ? <LoginForm /> : <RegisterForm />}
-        </div>
+            <Footer/>
         </>
     );
 };
-
 const LoginForm = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -67,7 +73,7 @@ const LoginForm = () => {
                         required
                     />
                 </div>
-                <button type="submit" className={styles.button}>Login</button>
+                <button type="submit" className={styles.button}><Link to="/Dashboard" className={styles.link}> Login</Link></button>
             </form>
         </div>
     );
@@ -89,7 +95,7 @@ const RegisterForm = () => {
         console.log('Registering:', { email, password, zipCode });
     };
 
-    return (
+    return (<>
         <div className={styles.formContainer}>
             <h2 className={styles.title}>Register</h2>
             <form className={styles.form} onSubmit={handleSubmit}>
@@ -136,7 +142,8 @@ const RegisterForm = () => {
                 <button type="submit" className={styles.button}>Register</button>
             </form>
         </div>
+        </>
     );
 };
 
-export default Shop;
+export default Farmers;

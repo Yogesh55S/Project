@@ -1,0 +1,22 @@
+.place{
+    float: right;
+    width:120px;
+    margin-right:100px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .placed{
+    border: none;
+    background-color: #004953;
+    color: white;
+    height: 40px;
+    width: 140px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .placed:hover{
+    background-color: #005bb5;
+  }
+  

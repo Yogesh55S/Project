@@ -1,0 +1,39 @@
+
+.sidebars {
+  height: 100vh; 
+  width: 250px; 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  background-color: #043927;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 20px;
+  color: #fff; 
+  padding: 20px; 
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); 
+  overflow-y: auto; 
+}
+
+.sidebars .h {
+  margin-top: 0;
+}
+
+.sidebars .sid {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebars .sid .sides {
+  margin: 15px 0;
+}
+
+.sidebars .sid .sides a {
+  text-decoration: none;
+  color: #fff; /* Link color */
+}
+
+.sidebars .sid .sides a:hover {
+  text-decoration: underline; /* Hover effect */
+}

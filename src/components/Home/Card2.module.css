@@ -1,0 +1,47 @@
+
+#name{
+  display: flex;
+  justify-content: center;
+  color: #043927;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 70px;
+}
+.images{
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  padding: 70px;
+}
+.img1, .img2, .img3{
+  background-image: url("/src/components/images/con1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  width: 400px;
+  border-radius: 40px;
+ position: relative;
+ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.img2{
+  background-image: url("/src/components/images/con2.jpg");
+}
+.img3{
+  background-image: url("/src/components/images/con3.jpg");
+}
+#cont{
+  font-family: "Libre Baskerville", serif;
+  font-weight: 500;
+  font-style: normal;
+  color: rgb(250, 250, 250);
+  position:absolute;
+  bottom: 0px;
+  left: 20px;
+  font-size: 30px;
+}
+#cont2{
+  font-size: 15px;
+  font-weight: 400;
+}

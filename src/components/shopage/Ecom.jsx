@@ -1,140 +1,91 @@
 /* eslint-disable react/prop-types */
+import styles from './Ecom.module.css';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import "./Ecom.css";
-import Pagination from 'react-bootstrap/Pagination';
+import Sidebar from "./Sidebar";
+import Pagi from "./Pagi";
+import Search from "./Search";
+import { useState } from "react";
+import itemsData from './items.json';
+import { FaOpencart } from "react-icons/fa";
 
-// Medicine Card Component
-const MedicineCard = ({medicine }) => {
+
+const FarmingItemCard = ({ item, onAddToCart }) => {
   return (
-    <Card style={{ width: '18rem', margin: '10px' }}>
-      <Card.Img variant="top" src={medicine.image} />
-      <Card.Body>
-        <Card.Title>{medicine.name}</Card.Title>
-        <Card.Text>
-          {medicine.description}
-        </Card.Text>
-        <Card.Text>
-          <strong>Price: ${medicine.price.toFixed(2)}</strong>
-        </Card.Text>
-        <Button variant="primary" onClick={() => alert('Added to cart!')}>Add to Cart</Button>
-        <Button variant="success" style={{ marginLeft: '10px' }} onClick={() => alert('Buying now!')}>Buy</Button>
-      </Card.Body>
-    </Card>
+    <div className="card-container">
+      <Card className={styles.card} style={{ width: '18rem', margin: '10px' }}>
+        <Card.Img variant="top" src={item.image} className={styles.cardImage} />
+        <Card.Body>
+          <Card.Title className={styles.cardTitle}>{item.name}</Card.Title>
+          <Card.Text className={styles.cardText}>
+            {item.description}
+          </Card.Text>
+          <Card.Text className={styles.cardPrice}>
+            <strong>Price: {item.price}</strong>
+          </Card.Text>
+          <Button variant="primary" className={styles.cardBtnPrimary} onClick={onAddToCart}>
+            Add to Cart
+          </Button>
+          <Button variant="success" className={styles.cardBtnSuccess} style={{ marginLeft: '10px' }}>
+            Buy
+          </Button>
+        </Card.Body>
+      </Card>
+    </div>
   );
 };
 
-// App Component
-const Ecom = () => {
-  // Example data
-  const medicines = [
-    {
-      id: 1,
-      name: 'Aspirin',
-      description: 'Pain relief medicine.',
-      price: 12.99,
-      image: '/src/components/images/id1.jpg'
-    },
-    {
-      id: 2,
-      name: 'Antibiotic',
-      description: 'Fights bacterial infections.',
-      price: 19.99,
-      image: '/src/components/images/id2.jpg'
-    },
-    {
-      id: 3,
-      name: 'Antiseptic',
-      description: 'Disinfects wounds.',
-      price: 8.99,
-      image: '/src/components/images/id3.jpg'
-    },
-    {
-      id: 4,
-      name: 'Cough Syrup',
-      description: 'Relieves cough and throat irritation.',
-      price: 9.99,
-      image: '/src/components/images/id4.jpg'
-    },
-    {
-      id: 5,
-      name: 'Aspirin',
-      description: 'Pain relief medicine.',
-      price: 12.99,
-      image: '/src/components/images/id1.jpg'
-    },
-    {
-      id: 6,
-      name: 'Antibiotic',
-      description: 'Fights bacterial infections.',
-      price: 19.99,
-      image: '/src/components/images/id2.jpg'
-    },
-    {
-      id: 7,
-      name: 'Antiseptic',
-      description: 'Disinfects wounds.',
-      price: 8.99,
-      image: '/src/components/images/id3.jpg'
-    },
-    {
-      id: 8,
-      name: 'Cough Syrup',
-      description: 'Relieves cough and throat irritation.',
-      price: 9.99,
-      image: '/src/components/images/id4.jpg'
+const FarmingItems = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [currentItems, setCurrentItems] = useState(itemsData.farmingItems); 
+  const [cartCount, setCartCount] = useState(0);
+
+  const handleSidebarClick = (category) => {
+    if (category === 'wheat') {
+      setCurrentItems(itemsData.wheatItems); 
+    } else if (category === 'corn') {
+      setCurrentItems(itemsData.cornItems); 
+    } else {
+      setCurrentItems(itemsData.farmingItems); 
     }
-  ];
+  };
+
+  const handleAddToCart = () => {
+    setCartCount(cartCount + 1);
+    
+    console.log('Items in cart:', cartCount + 1); 
+  };
+
+  const filteredItems = currentItems.filter((item) => {
+    return item.name.toLowerCase().includes(searchQuery.toLowerCase());
+  });
 
   return (
-    <Container>
-      <nav>
-    <div className="search">
-      <input type="text" name="Search" id="search" placeholder="search" />
-      <button className="searchbtn">Search</button>
-    </div>
-
-  </nav>
-      <Row>
-        {medicines.map(medicine => (
-          <Col key={medicine.id} md={3}>
-            <MedicineCard medicine={medicine} />
-          </Col>
-        ))}
-      </Row>
-    <Pagination>
-      <Pagination.First />
-      <Pagination.Prev />
-      <Pagination.Item active>{1}</Pagination.Item>
-      <Pagination.Ellipsis />
-
-      <Pagination.Item>{10}</Pagination.Item>
-      <Pagination.Item>{11}</Pagination.Item>
-      <Pagination.Item >{12}</Pagination.Item>
-      <Pagination.Item>{13}</Pagination.Item>
-      <Pagination.Item disabled>{14}</Pagination.Item>
-
-      <Pagination.Ellipsis />
-      <Pagination.Item>{20}</Pagination.Item>
-      <Pagination.Next />
-      <Pagination.Last />
-    </Pagination>
-    </Container>
+    <>
+      <p style={{ textAlign: "center", fontSize: "50px", fontFamily: "Libre Baskerville", color: "#043927" }}>AGRI-FARMA</p>
+      <Sidebar onCategoryClick={handleSidebarClick} />
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', marginRight: '150px' }}>
+        <Search value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} style={{ marginRight: "10px" }} />
+          <FaOpencart id={styles.cart} />
+          {cartCount > 0 && (
+            <div className={styles.none}>
+              {cartCount}
+            </div>
+          )}
+        
+      </div>
+      <Container style={{ marginTop: "70px" }}>
+        <Row>
+          {filteredItems.map((item, index) => (
+            <Col key={item.id} md={3} xs={6}>
+              <FarmingItemCard item={item} onAddToCart={handleAddToCart} />
+              {(index + 1) % 4 === 0 && <hr />}
+            </Col>
+          ))}
+        </Row>
+      </Container>
+      <Pagi />
+    </>
   );
 };
 
-export default Ecom;
-
-/*import "./Ecom.css";
-const Ecom =() =>{
-  return (<>
-  <nav>
-    <div className="search">
-      <input type="text" name="Search" id="search" placeholder="search" />
-      <button className="searchbtn">Search</button>
-    </div>
-
-  </nav>
-  </>)
-}
-export default Ecom;*/
+export default FarmingItems;

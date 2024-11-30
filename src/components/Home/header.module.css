@@ -1,0 +1,78 @@
+.nav {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  cursor: pointer;
+  background-size: cover;
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:lighter;
+  font-style: normal;
+}
+
+.list  {
+  list-style: none;
+  color:black;
+  font-size: 18px;
+  margin: 10px 0px 0px 0px;
+  display: flex;
+  
+}
+
+li.tree {
+  color: white;
+  font-size: 30px;
+  margin-top: -15px;
+  margin: 10px 0px 0px 0px;
+}
+
+li:hover {
+  color: white; 
+  transform: scale(1.1); 
+  transition: transform 0.3s ease-in-out; 
+}
+
+.no-underline {
+  text-decoration: none;
+  color: inherit;
+}
+.menu{
+  list-style: none;
+  color: gray;
+  font-size: 21px;
+  margin: 10px 0px 0px 0px;
+  text-decoration: none;
+}
+.list2{
+  list-style: none;
+  color:white;
+  font-size: 18px;
+  margin: 0px 0px 0px 0px;
+  background-color: #C80815;
+  border: 10px solid #C80815;
+}
+.name{
+  list-style: none;
+  color:black;
+  font-size: 28px;
+  margin: 10px auto 0px 0px;
+  float: left;
+  margin-left: 190px;
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+.name:hover{
+  color: gray;
+}
+#icon{
+  transform: scale(-1, 1);
+  font-size:40px;
+  margin:-10px 0px 0px 0px;
+}
+#icon:hover{
+  color: #C80815;
+}

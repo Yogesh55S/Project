@@ -1,0 +1,35 @@
+.searchcontainer {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.searchcontainer input[type="text"] {
+  width: 200px;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+}
+
+.searchcontainer button {
+  background-color: #043927;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-top-left-radius:  20px;
+  border-bottom-right-radius: 20px;
+}
+#cart{
+  position: absolute;
+  left: 80%;
+  top: 4%;
+  font-size: 30px;
+}

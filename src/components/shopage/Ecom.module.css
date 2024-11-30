@@ -1,0 +1,167 @@
+
+.card {
+  width: 18rem;
+  min-width:18rem;
+  margin: 10px auto;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+  overflow: hidden;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 100px;
+  
+}
+
+.cardImage {
+  height: 100px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.cardBody {
+  padding: 10px;
+}
+
+.cardTitle {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.cardText {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.cardPrice {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.cardBtns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.cardBtn {
+  width: 45%;
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cardBtnPrimary {
+  background-color: #337ab7;
+  color: #fff;
+}
+
+.cardBtnPrimary:hover {
+  background-color: #23527c;
+}
+
+.cardBtnSuccess {
+  background-color: #5cb85c;
+  color: #fff;
+}
+
+.cardBtnSuccess:hover {
+  background-color: #3e8e41;
+}
+#cart{
+  position: absolute;
+  left: 80%;
+  top: 4%;
+  font-size: 30px;
+}
+.none{
+  position:absolute;
+  top: 4%;
+  left: 78%;
+  border: 2px solid #043927;
+  width: 30px;
+  text-align: center;
+  border-radius: 180px;
+  color: white;
+  background-color:#043927 ;
+}
+/* Responsive design */
+
+/* Large screens (desktops) */
+@media (min-width: 1200px) {
+  .card {
+    width: 15rem;
+  }
+  .cardImage {
+    height: 120px;
+  }
+  .cardTitle {
+    font-size: 16px;
+  }
+  .cardText {
+    font-size: 14px;
+  }
+  .cardPrice {
+    font-size: 16px;
+  }
+  .cardBtn {
+    font-size: 14px;
+  }
+}
+
+/* Medium screens (tablets) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .card {
+    width: 12rem;
+  }
+  .cardImage {
+    height: 100px;
+  }
+  .cardTitle {
+    font-size: 14px;
+  }
+  .cardText {
+    font-size: 12px;
+  }
+  .cardPrice {
+    font-size: 14px;
+  }
+  .cardBtn {
+    font-size: 12px;
+  }
+}
+
+/* Small screens (mobiles) */
+@media (max-width: 767px) {
+  .card {
+    width: 90%;
+    margin: 10px auto;
+  }
+  .cardImage {
+    height: 80px;
+  }
+  .cardTitle {
+    font-size: 12px;
+  }
+  .cardText {
+    font-size: 10px;
+  }
+  .cardPrice {
+    font-size: 12px;
+  }
+  .cardBtn {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,50 @@
+{
+    "farmingItems": [
+      {
+        "id": 1,
+        "name": "Tractor",
+        "description": "Agricultural tractor for farming",
+        "price": 12000,
+        "image": "src/components/images/id1.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Seeds",
+        "description": "High quality seeds for farming",
+        "price": 500,
+        "image": "src/components/images/id2.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Fertilizers",
+        "description": "Organic fertilizers for farming",
+        "price": 800,
+        "image": "src/components/images/id3.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Irrigation System",
+        "description": "Drip irrigation system for farming",
+        "price": 3000,
+        "image": "src/components/images/id4.jpg"
+      }
+    ],
+    "wheatItems": [
+      {
+        "id": 5,
+        "name": "Wheat Seeds",
+        "description": "High-quality wheat seeds for farming",
+        "price": 300,
+        "image": "src/components/images/wheat.jpg"
+      }
+    ],
+    "cornItems": [
+      {
+        "id": 6,
+        "name": "Corn Seeds",
+        "description": "High-quality corn seeds for farming",
+        "price": 300,
+        "image": "src/components/images/corn.jpg"
+      }
+    ]
+  }

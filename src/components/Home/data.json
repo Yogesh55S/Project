@@ -1,30 +1,34 @@
 [
 {
-  "commodity": "Wheat",
+  "commodity": "",
   "price": 1950,
   "unit": "Rs/Quintal",
   "market": "Delhi",
-  "date": "2024-08-20"
+  "date": "2024-08-20",
+  "image":"/src/components/images/wheat.jpg"
 },
 {
   "commodity": "Rice",
   "price": 3000,
   "unit": "Rs/Quintal",
   "market": "Chennai",
-  "date": "2024-08-20"
+  "date": "2024-08-20",
+   "image":"/src/components/images/rice.jpg"
 },
 {
   "commodity": "Corn",
   "price": 2200,
   "unit": "Rs/Quintal",
   "market": "Mumbai",
-  "date": "2024-08-20"
+  "date": "2024-08-20",
+   "image":"/src/components/images/corn.jpg"
 },
 {
   "commodity": "Sugarcane",
   "price": 300,
   "unit": "Rs/Quintal",
   "market": "Delhi",
-  "date": "2024-08-20"
+  "date": "2024-08-20",
+   "image":"/src/components/images/sugar.jpg"
 }
 ]
