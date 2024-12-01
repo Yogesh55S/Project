@@ -1,9 +1,6 @@
-.container{
-    background: #444;;
-    height: 60px;
-}
-#name{
-    color: white;
-    float:inline-start;
-    margin-left: 80px;
+.name{
+    color:#347;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
 }
