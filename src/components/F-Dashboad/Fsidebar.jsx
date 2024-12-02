@@ -11,18 +11,18 @@ import { Link } from "react-router-dom";
 
 const Fsidebar = () => {
   const menuItems = [
-    { icon: FaHome, label: "Home", to: "/", className: "" },
-    { icon: IoPerson, label: "Profile", to: "/profile", className: "" },
-    { icon: LiaJediOrder, label: "Order", to: "/post-order", className: "" },
-    { icon: RiCoupon2Fill, label: "Dis-Coupon", to: "/coupons", className: "" },
-    { icon: TiWeatherPartlySunny, label: "Weather", to: "/weather", className: "auto",},
-    { icon: IoMdPower, label: "About Us", to: "/about-us", className: "" },
-    { icon: MdHelpOutline, label: "Need Help", to: "/help", className: "auto" },
+    { icon: FaHome, label: "Home", to: "/"},
+    { icon: IoPerson, label: "Profile", to: "/profile" },
+    { icon: LiaJediOrder, label: "Order", to: "/post-order" },
+    { icon: RiCoupon2Fill, label: "Dis-Coupon", to: "/coupons"},
+    { icon: TiWeatherPartlySunny, label: "Weather", to: "/weather" },
+    { icon: IoMdPower, label: "About Us", to: "/about-us" },
+    { icon: MdHelpOutline, label: "Need Help", to: "/help" },
   ];
 
   return (
-    <div className={styles.sidebar}>
-      <div className={styles.logo}>
+    <div className={styles.sidebar_}>
+      <div className={styles.logo_}>
         DASH<span> BOARD</span>
       </div>
       <ul>
