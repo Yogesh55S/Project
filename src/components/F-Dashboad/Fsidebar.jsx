@@ -5,38 +5,34 @@ import { LiaJediOrder } from "react-icons/lia";
 import { IoMdPower } from "react-icons/io";
 import { MdHelpOutline } from "react-icons/md";
 import { RiCoupon2Fill } from "react-icons/ri";
-import { TiWeatherPartlySunny } from "react-icons/ti";
+import OffCanvas from "./Offcanvas";
 import { Link } from "react-router-dom";
-//import OffCanvas from "./Offcanvas";
 
-const Fsidebar = () => {
+const Fsidebar = () =>{
   const menuItems = [
-    { icon: FaHome, label: "Home", to: "/"},
+    { icon: FaHome, label: "Home", to: "/" },
     { icon: IoPerson, label: "Profile", to: "/profile" },
-    { icon: LiaJediOrder, label: "Order", to: "/post-order" },
-    { icon: RiCoupon2Fill, label: "Dis-Coupon", to: "/coupons"},
-    { icon: TiWeatherPartlySunny, label: "Weather", to: "/weather" },
+    { icon: LiaJediOrder, label: "Your Order", to: "" },
+    { icon: RiCoupon2Fill, label: "Coupons", to: "" },
     { icon: IoMdPower, label: "About Us", to: "/about-us" },
-    { icon: MdHelpOutline, label: "Need Help", to: "/help" },
+    { icon: MdHelpOutline, label: "Need Help", to: "/help", className: "auto" },
   ];
-
   return (
-    <div className={styles.sidebar_}>
-      <div className={styles.logo_}>
-        DASH<span> BOARD</span>
+    <>
+    <div className={styles.sidebar2}>
+      <div className={styles.logo2}>
+        <span>DASH</span> BOARD
       </div>
-      <ul>
-        {menuItems.map((menuItem, index) => (
-          <li key={index}>
-            <Link to={menuItem.to} className={menuItem.className}>
-              <menuItem.icon className={styles.icon} />
-              {menuItem.label}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      {menuItems.map((menuItem, index) => (
+        <Link key={index} to={menuItem.to} className={menuItem.className}>
+          <menuItem.icon className={styles.icon2} />
+          {menuItem.label}
+        </Link>
+      )
+      )}
+       <OffCanvas/>
     </div>
-  );
-};
-
+    </>
+  )
+}
 export default Fsidebar;

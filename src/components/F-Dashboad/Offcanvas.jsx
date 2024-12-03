@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-
+import { TiWeatherPartlySunny } from "react-icons/ti";
 // eslint-disable-next-line react/prop-types
-function OffCanva({ name, ...props }) {
+function OffCanva({ ...props }) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -11,8 +11,8 @@ function OffCanva({ name, ...props }) {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow} className="me-2">
-        {name}
+      <Button onClick={handleShow} className="me-2">
+        <TiWeatherPartlySunny/> Weather
       </Button>
       <Offcanvas show={show} onHide={handleClose} {...props}>
         <Offcanvas.Header closeButton>
