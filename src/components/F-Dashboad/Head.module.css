@@ -23,3 +23,24 @@
      padding: 10px;
      width:200px;
  }
+
+ .ordertracking{
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    color: #043927;
+}
+.ordertrack{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    list-style: none;
+}
+.track{
+    text-align: center;
+}
+.order, .id{
+    display: flex;
+    width:950px;
+    justify-content: center;
+}
