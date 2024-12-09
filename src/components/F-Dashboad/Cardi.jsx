@@ -6,6 +6,9 @@ const Cardi = () => {
     { name: 'Tamato', location: 'Punjab(13 KM)', price: '₹50-60/Piece', image: '/src/components/images/tamato.jpg' },
     { name: 'Carot', location: 'Haryana (23 KM)', price: '₹50-60/Piece', image: '/src/components/images/carot.jpg' },
     { name: 'Banana', location: 'Karela (36 KM)', price: '₹50-60/Piece', image: '/src/components/images/banana.jpg' },
+    { name: 'Guava', location: 'Karela (36 KM)', price: '₹50-60/Piece', image: '/src/components/images/guava2.jpg' },
+    { name: 'Apple', location: 'Karela (36 KM)', price: '₹50-60/Piece', image: '/src/components/images/apple.jpg' },
+    { name: 'Mirchi', location: 'Karela (36 KM)', price: '₹50-60/Piece', image: '/src/components/images/green.jpg' },
   ];
 
   return (
