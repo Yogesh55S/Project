@@ -1,79 +1,242 @@
 {
-  "farmingItems": [],
-  "wheatItems": [
+  "farmingItems": [
     {
-      "id": 1,
-      "name": "Tractor",
-      "description": "Agricultural tractor for farming",
-      "price": 12000,
-      "image": "src/components/images/id1.jpg",
-      "category": "Equipment"
-    },
-    {
-      "id": 2,
-      "name": "Seeds",
-      "description": "High quality seeds for farming",
-      "price": 500,
-      "image": "src/components/images/id2.jpg",
-      "category": "Seeds"
-    },
-    {
-      "id": 3,
-      "name": "Fertilizers",
-      "description": "Organic fertilizers for farming",
-      "price": 800,
-      "image": "src/components/images/id3.jpg",
-      "category": "Fertilizers"
-    },
-    {
-      "id": 4,
-      "name": "Irrigation System",
-      "description": "Drip irrigation system for farming",
-      "price": 3000,
-      "image": "src/components/images/id4.jpg",
-      "category": "Irrigation"
-    }
+      "id": 11,
+      "name": "Rice Seeds",
+      "description": "Premium paddy seeds for high-yield rice production.",
+      "price": 750,
+      "image": "src/components/images/rice_seeds.jpg"
+  },
+  {
+      "id": 12,
+      "name": "Soybean Seeds",
+      "description": "High-quality soybean seeds for better protein-rich crops.",
+      "price": 850,
+      "image": "src/components/images/soybean_seeds.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Organic Fertilizer",
+    "description": "All-natural fertilizer to improve soil fertility.",
+    "price": 1400,
+    "image": "src/components/images/organic_fertilizer.jpg"
+},
+{
+    "id": 14,
+    "name": "Micronutrient Mix",
+    "description": "Essential micronutrients for balanced crop nutrition.",
+    "price": 1250,
+    "image": "src/components/images/micronutrient_mix.jpg"
+},{
+  "id": 15,
+  "name": "Organic Pesticide",
+  "description": "Eco-friendly pesticide for controlling a wide range of pests.",
+  "price": 1050,
+  "image": "src/components/images/organic_pesticide.jpg"
+},
+{
+  "id": 16,
+  "name": "Insecticide Spray",
+  "description": "Powerful spray to eliminate harmful insects.",
+  "price": 1150,
+  "image": "src/components/images/insecticide_spray.jpg"
+},{
+  "id": 17,
+  "name": "Broad-Spectrum Herbicide",
+  "description": "Highly effective against a wide variety of weeds.",
+  "price": 950,
+  "image": "src/components/images/broad_spectrum_herbicide.jpg"
+},
+{
+  "id": 18,
+  "name": "Selective Herbicide",
+  "description": "Kills weeds while protecting specific crops.",
+  "price": 980,
+  "image": "src/components/images/selective_herbicide.jpg"
+},{
+  "id": 19,
+  "name": "Hand Tiller",
+  "description": "Durable and lightweight hand tiller for small-scale farming.",
+  "price": 2500,
+  "image": "src/components/images/hand_tiller.jpg"
+},
+{
+  "id": 20,
+  "name": "Automatic Seeder",
+  "description": "Efficient machine for planting seeds evenly.",
+  "price": 12000,
+  "image": "src/components/images/automatic_seeder.jpg"
+},{
+  "id": 21,
+  "name": "Drip Irrigation Kit",
+  "description": "Complete kit for water-efficient drip irrigation.",
+  "price": 5000,
+  "image": "src/components/images/drip_irrigation_kit.jpg"
+},
+{
+  "id": 22,
+  "name": "Sprinkler System",
+  "description": "High-quality sprinkler system for large fields.",
+  "price": 8000,
+  "image": "src/components/images/sprinkler_system.jpg"
+},
+{
+  "id": 23,
+  "name": "Grain Storage Bags",
+  "description": "Moisture-resistant bags for safe grain storage.",
+  "price": 250,
+  "image": "src/components/images/grain_storage_bags.jpg"
+},
+{
+  "id": 24,
+  "name": "Metal Silos",
+  "description": "Durable silos for large-scale crop storage.",
+  "price": 25000,
+  "image": "src/components/images/metal_silos.jpg"
+},{
+  "id": 25,
+  "name": "Tractor",
+  "description": "High-performance tractor suitable for all terrains.",
+  "price": 500000,
+  "image": "src/components/images/tractor.jpg"
+},
+{
+  "id": 26,
+  "name": "Combine Harvester",
+  "description": "Efficient machine for harvesting and threshing grains.",
+  "price": 1500000,
+  "image": "src/components/images/combine_harvester.jpg"
+}  
   ],
   "cornItems": [
     {
+      "id": 27,
+      "name": "Hybrid Corn Seeds",
+      "description": "High-yield hybrid corn seeds with disease resistance.",
+      "price": 850,
+      "image": "src/components/images/hybrid_corn_seeds.jpg"
+  },
+  {
+      "id": 28,
+      "name": "Organic Corn Seeds",
+      "description": "Certified organic seeds for sustainable corn farming.",
+      "price": 950,
+      "image": "src/components/images/organic_corn_seeds.jpg"
+  },{
+    "id": 29,
+    "name": "Corn-Specific NPK Fertilizer",
+    "description": "Customized NPK formula for higher corn yield.",
+    "price": 1200,
+    "image": "src/components/images/corn_npk_fertilizer.jpg"
+},
+{
+    "id": 30,
+    "name": "Nitrogen Booster",
+    "description": "Supplemental nitrogen to improve corn growth during vegetative stages.",
+    "price": 1100,
+    "image": "src/components/images/nitrogen_booster.jpg"
+},{
+  "id": 31,
+  "name": "Pre-Emergence Herbicide",
+  "description": "Controls weeds before they germinate in cornfields.",
+  "price": 1000,
+  "image": "src/components/images/pre_emergence_herbicide.jpg"
+},
+{
+  "id": 32,
+  "name": "Post-Emergence Herbicide",
+  "description": "Targets weeds without damaging growing corn.",
+  "price": 950,
+  "image": "src/components/images/post_emergence_herbicide.jpg"
+},{
+  "id": 33,
+  "name": "Corn Borer Control",
+  "description": "Specialized pesticide for controlling European corn borers.",
+  "price": 1250,
+  "image": "src/components/images/corn_borer_control.jpg"
+},
+{
+  "id": 34,
+  "name": "Aphid Killer",
+  "description": "Effective solution against aphid infestations in cornfields.",
+  "price": 1150,
+  "image": "src/components/images/aphid_killer.jpg"
+},{
+  "id": 35,
+  "name": "Corn Yield Enhancer",
+  "description": "Bio-stimulant to improve kernel size and uniformity.",
+  "price": 1400,
+  "image": "src/components/images/corn_yield_enhancer.jpg"
+},
+{
+  "id": 36,
+  "name": "Root Development Booster",
+  "description": "Enhances root growth for better nutrient absorption in corn.",
+  "price": 1300,
+  "image": "src/components/images/root_development_booster.jpg"
+},{
+  "id": 37,
+  "name": "Corn Harvest Knife",
+  "description": "Ergonomic knife for manual corn harvesting.",
+  "price": 300,
+  "image": "src/components/images/corn_harvest_knife.jpg"
+},
+{
+  "id": 38,
+  "name": "Corn Sheller",
+  "description": "Manual corn sheller for small-scale operations.",
+  "price": 1800,
+  "image": "src/components/images/corn_sheller.jpg"
+},{
+  "id": 39,
+  "name": "Moisture-Proof Storage Bags",
+  "description": "Special bags to store harvested corn safely.",
+  "price": 500,
+  "image": "src/components/images/corn_storage_bags.jpg"
+},
+{
+  "id": 40,
+  "name": "Portable Grain Bin",
+  "description": "Portable bin for storing and transporting harvested corn.",
+  "price": 10000,
+  "image": "src/components/images/portable_grain_bin.jpg"
+} 
+],
+  "wheatItems": [
+    {
       "id": 1,
-      "name": "Corn Seeds",
-      "description": "High-quality hybrid corn seeds for better yield.",
-      "price": 800,
-      "image": "src/components/images/corn_seeds.jpg",
-      "category": "Seeds"
-    },
-    {
-      "id": 2,
-      "name": "Corn Fertilizer",
-      "description": "Balanced NPK fertilizer tailored for corn growth.",
-      "price": 1200,
-      "image": "src/components/images/corn_fertilizer.jpg",
-      "category": "Fertilizers"
-    },
-    {
-      "id": 3,
-      "name": "Corn Herbicide",
-      "description": "Selective herbicide to control weeds in cornfields.",
-      "price": 900,
-      "image": "src/components/images/corn_herbicide.jpg",
-      "category": "Herbicides"
-    },
-    {
-      "id": 4,
-      "name": "Corn Pesticide",
-      "description": "Protects corn crops from common pests like corn borers.",
-      "price": 1100,
-      "image": "src/components/images/corn_pesticide.jpg",
-      "category": "Pesticides"
-    },
-    {
-      "id": 5,
-      "name": "Corn Growth Enhancer",
-      "description": "Bio-stimulant to boost growth and kernel size.",
-      "price": 1500,
-      "image": "src/components/images/corn_growth_enhancer.jpg",
-      "category": "Growth Enhancers"
-    }
+      "name": "Wheat Seeds",
+      "description": "High-yield wheat seeds for enhanced farming output.",
+      "price": 700,
+      "image": "src/components/images/wheat_seeds.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Wheat Fertilizer",
+    "description": "Specialized NPK fertilizer for optimal wheat growth.",
+    "price": 1300,
+    "image": "src/components/images/wheat_fertilizer.jpg"
+},
+{
+  "id": 3,
+  "name": "Wheat Herbicide",
+  "description": "Effective herbicide to control weeds in wheat fields.",
+  "price": 950,
+  "image": "src/components/images/wheat_herbicide.jpg"
+},
+{
+  "id": 4,
+  "name": "Wheat Growth Enhancer",
+  "description": "Plant growth regulator to improve tillering and grain quality.",
+  "price": 1600,
+  "image": "src/components/images/wheat_growth_enhancer.jpg"
+},
+{
+  "id": 5,
+  "name": "Wheat Pesticide",
+  "description": "Protects wheat from pests such as aphids and armyworms.",
+  "price": 1150,
+  "image": "src/components/images/wheat_pesticide.jpg"
+}
   ]
 }

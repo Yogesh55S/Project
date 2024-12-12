@@ -42,7 +42,7 @@ const FarmingItems = () => {
   const handleSidebarClick = (category) => {
     if (category === 'wheat') {
       setCurrentItems(itemsData.wheatItems); 
-    } else if (category === 'corn') {
+    } else if (category === 'Corn') {
       setCurrentItems(itemsData.cornItems); 
     } else {
       setCurrentItems(itemsData.farmingItems); 
