@@ -1,50 +1,79 @@
 {
-    "farmingItems": [
-      {
-        "id": 1,
-        "name": "Tractor",
-        "description": "Agricultural tractor for farming",
-        "price": 12000,
-        "image": "src/components/images/id1.jpg"
-      },
-      {
-        "id": 2,
-        "name": "Seeds",
-        "description": "High quality seeds for farming",
-        "price": 500,
-        "image": "src/components/images/id2.jpg"
-      },
-      {
-        "id": 3,
-        "name": "Fertilizers",
-        "description": "Organic fertilizers for farming",
-        "price": 800,
-        "image": "src/components/images/id3.jpg"
-      },
-      {
-        "id": 4,
-        "name": "Irrigation System",
-        "description": "Drip irrigation system for farming",
-        "price": 3000,
-        "image": "src/components/images/id4.jpg"
-      }
-    ],
-    "wheatItems": [
-      {
-        "id": 5,
-        "name": "Wheat Seeds",
-        "description": "High-quality wheat seeds for farming",
-        "price": 300,
-        "image": "src/components/images/wheat.jpg"
-      }
-    ],
-    "cornItems": [
-      {
-        "id": 6,
-        "name": "Corn Seeds",
-        "description": "High-quality corn seeds for farming",
-        "price": 300,
-        "image": "src/components/images/corn.jpg"
-      }
-    ]
-  }
+  "farmingItems": [],
+  "wheatItems": [
+    {
+      "id": 1,
+      "name": "Tractor",
+      "description": "Agricultural tractor for farming",
+      "price": 12000,
+      "image": "src/components/images/id1.jpg",
+      "category": "Equipment"
+    },
+    {
+      "id": 2,
+      "name": "Seeds",
+      "description": "High quality seeds for farming",
+      "price": 500,
+      "image": "src/components/images/id2.jpg",
+      "category": "Seeds"
+    },
+    {
+      "id": 3,
+      "name": "Fertilizers",
+      "description": "Organic fertilizers for farming",
+      "price": 800,
+      "image": "src/components/images/id3.jpg",
+      "category": "Fertilizers"
+    },
+    {
+      "id": 4,
+      "name": "Irrigation System",
+      "description": "Drip irrigation system for farming",
+      "price": 3000,
+      "image": "src/components/images/id4.jpg",
+      "category": "Irrigation"
+    }
+  ],
+  "cornItems": [
+    {
+      "id": 1,
+      "name": "Corn Seeds",
+      "description": "High-quality hybrid corn seeds for better yield.",
+      "price": 800,
+      "image": "src/components/images/corn_seeds.jpg",
+      "category": "Seeds"
+    },
+    {
+      "id": 2,
+      "name": "Corn Fertilizer",
+      "description": "Balanced NPK fertilizer tailored for corn growth.",
+      "price": 1200,
+      "image": "src/components/images/corn_fertilizer.jpg",
+      "category": "Fertilizers"
+    },
+    {
+      "id": 3,
+      "name": "Corn Herbicide",
+      "description": "Selective herbicide to control weeds in cornfields.",
+      "price": 900,
+      "image": "src/components/images/corn_herbicide.jpg",
+      "category": "Herbicides"
+    },
+    {
+      "id": 4,
+      "name": "Corn Pesticide",
+      "description": "Protects corn crops from common pests like corn borers.",
+      "price": 1100,
+      "image": "src/components/images/corn_pesticide.jpg",
+      "category": "Pesticides"
+    },
+    {
+      "id": 5,
+      "name": "Corn Growth Enhancer",
+      "description": "Bio-stimulant to boost growth and kernel size.",
+      "price": 1500,
+      "image": "src/components/images/corn_growth_enhancer.jpg",
+      "category": "Growth Enhancers"
+    }
+  ]
+}

@@ -3,6 +3,7 @@ import { MdAgriculture } from "react-icons/md";
 import styles from './Farmers.module.css';
 import myImage from '/src/components/images/even.jpg'; 
 import Footer from "/src/components/Home/Footer";
+import { Link } from 'react-router-dom';
 
 const Farmers = () => {
     const [isLogin, setIsLogin] = useState(true);
@@ -75,8 +76,8 @@ const Farmers = () => {
                                         onChange={(e) => setLoginPassword(e.target.value)}
                                         required
                                     />
-                                </div>
-                                <button type="submit" className={styles.button}>Login</button>
+                                </div> 
+                                <button type="submit" className={styles.button}><Link to='/fboard' id={styles.link}>Login</Link></button>
                             </form>
                         </div>
                     ) : (
@@ -123,7 +124,7 @@ const Farmers = () => {
                                         required
                                     />
                                 </div>
-                                <button type="submit" className={styles.button}>Register</button>
+                                <button type="submit" className={styles.button}><Link to='/fboard' id={styles.link}>Register</Link></button>
                             </form>
                         </div>
                     )}

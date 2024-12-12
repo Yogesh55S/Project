@@ -139,7 +139,7 @@ const RegisterForm = () => {
                         required
                     />
                 </div>
-                <button type="submit" className={styles.button}>Register</button>
+                <button type="submit" className={styles.button}><Link to="/Dashboard" className={styles.link}> Register</Link></button>
             </form>
         </div>
         </>

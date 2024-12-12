@@ -13,6 +13,7 @@ import Coup from './components/Dashboard/coupon/couponform.jsx';
 import Post from './components/shopage/buy/Postorder.jsx';
 import Profile from './components/shopage/buy/Profile.jsx';
 import Board from './components/F-Dashboad/Fashboard.jsx';
+import Coupon from './components/F-Dashboad/Coupons.jsx';
 //import { Navbar } from 'react-bootstrap';
 
 const router = createBrowserRouter([
@@ -27,6 +28,7 @@ const router = createBrowserRouter([
   {path:"/post-order", element:<Post/>},
   {path:"/profile", element:<Profile/>},
   {path:"/fboard", element:<Board/>},
+  {path:"/coupon", element:<Coupon/>},
 ]);
 
 createRoot(document.getElementById('root')).render(

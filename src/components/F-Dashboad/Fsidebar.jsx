@@ -13,7 +13,7 @@ const Fsidebar = () =>{
     { icon: FaHome, label: "Home", to: "/" },
     { icon: IoPerson, label: "Profile", to: "/profile" },
     { icon: LiaJediOrder, label: "Your Order", to: "" },
-    { icon: RiCoupon2Fill, label: "Coupons", to: "" },
+    { icon: RiCoupon2Fill, label: "Coupons", to: "/coupon"},
     { icon: IoMdPower, label: "About Us", to: "/about-us" },
     { icon: MdHelpOutline, label: "Need Help", to: "/help", className: "auto" },
   ];
