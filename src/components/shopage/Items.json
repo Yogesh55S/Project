@@ -5,7 +5,7 @@
       "name": "Rice Seeds",
       "description": "Premium paddy seeds for high-yield rice production.",
       "price": 750,
-      "image": "src/components/images/rice_seeds.jpg"
+      "image": "src/components/images/riceseed.jpg"
   },
   {
       "id": 12,
