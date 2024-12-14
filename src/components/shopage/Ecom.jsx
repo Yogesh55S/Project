@@ -8,8 +8,7 @@ import { useState } from "react";
 import itemsData from './items.json';
 import { FaOpencart } from "react-icons/fa";
 
-
-const FarmingItemCard = ({ item, onAddToCart }) => {
+const FarmingItemCard = ({ item, onAddToCart, onBuy }) => {
   return (
     <div className="card-container">
       <Card className={styles.card} style={{ width: '18rem', margin: '10px' }}>
@@ -25,7 +24,12 @@ const FarmingItemCard = ({ item, onAddToCart }) => {
           <Button variant="primary" className={styles.cardBtnPrimary} onClick={onAddToCart}>
             Add to Cart
           </Button>
-          <Button variant="success" className={styles.cardBtnSuccess} style={{ marginLeft: '10px' }}>
+          <Button 
+            variant="success" 
+            className={styles.cardBtnSuccess} 
+            style={{ marginLeft: '10px' }} 
+            onClick={() => onBuy(item)} // Pass the item to onBuy
+          >
             Buy
           </Button>
         </Card.Body>
@@ -38,6 +42,7 @@ const FarmingItems = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [currentItems, setCurrentItems] = useState(itemsData.farmingItems); 
   const [cartCount, setCartCount] = useState(0);
+  const [selectedItem, setSelectedItem] = useState(null);
 
   const handleSidebarClick = (category) => {
     if (category === 'wheat') {
@@ -51,8 +56,11 @@ const FarmingItems = () => {
 
   const handleAddToCart = () => {
     setCartCount(cartCount + 1);
-    
     console.log('Items in cart:', cartCount + 1); 
+  };
+
+  const handleBuy = (item) => {
+    setSelectedItem(item); // Set the clicked item as the selectedItem
   };
 
   const filteredItems = currentItems.filter((item) => {
@@ -65,24 +73,37 @@ const FarmingItems = () => {
       <Sidebar onCategoryClick={handleSidebarClick} />
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', marginRight: '150px' }}>
         <Search value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} style={{ marginRight: "10px" }} />
-          <FaOpencart id={styles.cart} />
-          {cartCount > 0 && (
-            <div className={styles.none}>
-              {cartCount}
-            </div>
-          )}
-        
+        <FaOpencart id={styles.cart} />
+        {cartCount > 0 && (
+          <div className={styles.none}>
+            {cartCount}
+          </div>
+        )}
       </div>
       <Container style={{ marginTop: "70px" }}>
         <Row>
           {filteredItems.map((item, index) => (
             <Col key={item.id} md={3} xs={6}>
-              <FarmingItemCard item={item} onAddToCart={handleAddToCart} />
+              <FarmingItemCard 
+                item={item} 
+                onAddToCart={handleAddToCart} 
+                onBuy={handleBuy} // Use the correct handleBuy function
+              />
               {(index + 1) % 4 === 0 && <hr />}
             </Col>
           ))}
         </Row>
       </Container>
+      {selectedItem && (
+        <div className={styles.detailSection}>
+          <h2>Item Details</h2>
+          <img src={selectedItem.image} alt={selectedItem.name} style={{ maxWidth: "200px" }} />
+          <h3>{selectedItem.name}</h3>
+          <p>{selectedItem.description}</p>
+          <p><strong>Price: {selectedItem.price}</strong></p>
+          <Button variant="success" onClick={() => setSelectedItem(null)}>Close</Button>
+        </div>
+      )}
       <Pagi />
     </>
   );
