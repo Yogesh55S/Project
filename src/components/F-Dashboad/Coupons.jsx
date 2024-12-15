@@ -6,8 +6,8 @@ const Coupon = () => {
         { code: 'SAVE20', discount: '20% off', description: 'Get 20% off on your next purchase!' },
         { code: 'FREESHIP', discount: 'Free Shipping', description: 'Enjoy free shipping on orders over $50!' },
         { code: 'BUY1GET1', discount: 'Buy 1 Get 1 Free', description: 'Buy one item and get another one free!' },
-        { code: 'BUY1GET1', discount: 'Buy 3 Get 1 Free', description: 'Buy one item and get another one free!' },
-        { code: 'BUY1GET1', discount: 'Buy 2 Get 1 Free', description: 'Buy one item and get another one free!' },
+        { code: 'BUY3GET1', discount: 'Buy 3 Get 1 Free', description: 'Buy one item and get another one free!' },
+        { code: 'BUY2GET1', discount: 'Buy 2 Get 1 Free', description: 'Buy one item and get another one free!' },
     ];
 
     return (

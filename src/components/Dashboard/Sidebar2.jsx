@@ -13,6 +13,7 @@ const Sidebar2 = () => {
     { icon: IoPerson, label: "Profile", to: "/profile" },
     { icon: LiaJediOrder, label: "Post Your Order", to: "/post-order" },
     { icon: RiCoupon2Fill, label: "Coupons", to: "/coupons" },
+    { icon: LiaJediOrder, label: "Market", to: "/market" },
     { icon: IoMdPower, label: "About Us", to: "/about-us" },
     { icon: MdHelpOutline, label: "Need Help", to: "/help", className: "auto" },
   ];

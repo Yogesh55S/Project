@@ -22,7 +22,7 @@ const Post = () => {
         formData.append("price", price);
         formData.append("image", image);
         // API call to submit form data
-        fetch("/api/submit", {
+        fetch("http://localhost:5000/api/submit", {
             method: "POST",
             body: formData,
         })
